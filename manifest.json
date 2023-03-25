@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Live Tennis",
+  "version": "1.0",
+  "description": "Displays live tournament information such as scores, statistics and betting odds. This extension only pulls live ATP, WTA or Grand Slam tournament information.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["liveTennis.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permission": ["storage"]
+}
