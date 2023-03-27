@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Live Tennis</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main id="container-main">
+      <script src="popup.js"></script>
+      <div class="container">
+        <ul class="container-flex">
+          <li class="filters-main-item">
+            <button>ATP</button>
+          </li>
+          <li class="filters-main-item">
+            <button>WTA</button>
+          </li>
+          <li id="filters-main-item">
+            <button>Special Events</button>
+          </li>
+        </ul>
+        <div class="container-flex">
+          <button id="reload-btn">Reload</button>
+          <button id="settings-btn">Settings</button>
+        </div>
+      </div>
+
+      <div class="container-flex">
+        <div class="container-column" id="left-column-container">
+          <div class="focused-score-card" id="left-column-focused">Focused List Item</div>
+          <ul class="column-list" id="left-column-list">
+            <!-- <li></li> -->
+            <li class="mini-score-card"></li>
+            <li class="mini-score-card"></li>
+            <li class="mini-score-card"></li>
+            <li class="mini-score-card"></li>
+            <li class="mini-score-card"></li>
+          </ul>
+        </div>
+        <div class="container-column" id="right-column-container">
+          <div class="focused-score-card" id="right-column-focused">Focused List Item</div>
+          <ul class="column-list" id="right-column-list">
+            <!-- <li></li> -->
+            <li class="mini-score-card"></li>
+            <li class="mini-score-card"></li>
+            <li class="mini-score-card"></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+/*contents expand to fill by default, this keeps things neater with a small margin all around*/
+body {
+  margin: 0;
+  padding: 1em;
+  overflow: hidden;
+}
+
+/* resets */
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* containers */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.container-flex {
+  display: flex;
+  gap: 1em;
+}
+
+.container-column {
+  width: 320px;
+  max-height: 500px;
+  border: black dashed 2px;
+  overflow-y: auto;
+  scrollbar-width: 6px; /* not sure if conflicting with column-list styles*/
+}
+
+/* main classes */
+
+.focused-score-card {
+  height: 222px;
+  border: blue dotted 3px;
+}
+
+.mini-score-card {
+  height: 66px;
+  border: red dotted 3px;
+}
+
+.column-list {
+  /* copied from https://codepen.io/chriscoyier/pen/YzXBYvL*/
+  --scrollbarBG: transparent;
+  --thumbBG: #90a4ae;
+
+  scrollbar-width: thin; /* seems like this is where the styling should apply */
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+
+  background:
+    /* Shadow Cover TOP */ linear-gradient(white 30%, rgba(255, 255, 255, 0)) center top,
+    /* Shadow Cover BOTTOM */ linear-gradient(rgba(255, 255, 255, 0), white 70%) center bottom,
+    /* Shadow TOP */ radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) center top,
+    /* Shadow BOTTOM */ radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) center bottom;
+
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* id */
